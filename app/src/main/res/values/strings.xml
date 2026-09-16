@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Water Tracker</string>
+    <string name="shortcut_glass_short">Log Glass</string>
+    <string name="shortcut_glass_long">Log Glass of Water (250ml)</string>
+    <string name="shortcut_bottle_short">Log Bottle</string>
+    <string name="shortcut_bottle_long">Log 500ml Bottle of Water</string>
+    <string name="shortcut_assistant_short">Gemini Assistant</string>
+    <string name="shortcut_assistant_long">Ask Gemini Hydration Assistant</string>
+</resources>

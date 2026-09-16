@@ -1,0 +1,7 @@
+{
+  "name": "Water Tracker",
+  "description": "Smart daily water intake tracker powered by Gemini AI assistant with voice & natural language logging, interactive wave tumbler, hydration analytics, smart reminders, and offline encryption.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

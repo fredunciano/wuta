@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Water droplet shape within 66dp safe zone (canvas 108dp) -->
+    <!-- Droplet Base -->
+    <path
+        android:pathData="M54,26 C54,26 35,49 35,62 C35,72.5 43.5,81 54,81 C64.5,81 73,72.5 73,62 C73,49 54,26 54,26 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="54"
+                android:startY="26"
+                android:endX="54"
+                android:endY="81"
+                android:type="linear">
+                <item android:color="#70D8FF" android:offset="0.0" />
+                <item android:color="#00A2E8" android:offset="0.6" />
+                <item android:color="#0077B6" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Wave ripple inside droplet -->
+    <path
+        android:pathData="M37.5,63 C42,66 48,60 54,63 C60,66 66,61 70.5,63 C72.2,67.8 71.5,73 68,76.5 C64.3,80.2 59.3,81 54,81 C48.7,81 43.7,80.2 40,76.5 C36.5,73 35.8,67.8 37.5,63 Z"
+        android:fillColor="#B3E5FC"
+        android:fillAlpha="0.85" />
+    <!-- Glass sheen highlight -->
+    <path
+        android:pathData="M44,48 C41,53 40,58 40,63"
+        android:strokeWidth="3.2"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.75" />
+    <path
+        android:pathData="M48,40 C46.5,42.5 45.5,45 45,47"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.9" />
+</vector>

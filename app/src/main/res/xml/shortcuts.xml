@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. Google Assistant Built-in Intent: RECORD_FOOD_OR_WATER -->
+    <capability android:name="actions.intent.RECORD_FOOD_OR_WATER">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example"
+            android:targetClass="com.example.MainActivity"
+            android:data="watertracker://log?query={name}">
+            <parameter
+                android:name="foodOrWater.name"
+                android:key="name" />
+        </intent>
+        <intent
+            android:action="com.aistudio.watertracker.ACTION_VOICE_LOG"
+            android:targetPackage="com.example"
+            android:targetClass="com.example.reminder.VoiceLoggingReceiver">
+            <parameter
+                android:name="foodOrWater.name"
+                android:key="query" />
+        </intent>
+    </capability>
+
+    <!-- 2. Google Assistant Built-in Intent: LOG_HEALTH_METRIC -->
+    <capability android:name="actions.intent.LOG_HEALTH_METRIC">
+        <intent
+            android:action="com.aistudio.watertracker.ACTION_VOICE_LOG"
+            android:targetPackage="com.example"
+            android:targetClass="com.example.reminder.VoiceLoggingReceiver">
+            <parameter
+                android:name="healthMetric.name"
+                android:key="query" />
+        </intent>
+    </capability>
+
+    <!-- 3. Static App Shortcut: Quick Log Glass of Water -->
+    <shortcut
+        android:shortcutId="shortcut_log_glass"
+        android:enabled="true"
+        android:icon="@drawable/ic_water_drop"
+        android:shortcutShortLabel="@string/shortcut_glass_short"
+        android:shortcutLongLabel="@string/shortcut_glass_long">
+        <intent
+            android:action="com.aistudio.watertracker.ACTION_VOICE_LOG"
+            android:targetPackage="com.example"
+            android:targetClass="com.example.reminder.VoiceLoggingReceiver">
+            <extra android:name="query" android:value="I drank a glass of water" />
+            <extra android:name="amountMl" android:value="250" />
+        </intent>
+        <categories android:name="actions.intent.RECORD_FOOD_OR_WATER" />
+    </shortcut>
+
+    <!-- 4. Static App Shortcut: Quick Log 500ml Bottle -->
+    <shortcut
+        android:shortcutId="shortcut_log_bottle"
+        android:enabled="true"
+        android:icon="@drawable/ic_water_drop"
+        android:shortcutShortLabel="@string/shortcut_bottle_short"
+        android:shortcutLongLabel="@string/shortcut_bottle_long">
+        <intent
+            android:action="com.aistudio.watertracker.ACTION_VOICE_LOG"
+            android:targetPackage="com.example"
+            android:targetClass="com.example.reminder.VoiceLoggingReceiver">
+            <extra android:name="query" android:value="I drank a 500ml bottle of water" />
+            <extra android:name="amountMl" android:value="500" />
+        </intent>
+        <categories android:name="actions.intent.RECORD_FOOD_OR_WATER" />
+    </shortcut>
+
+    <!-- 5. Static App Shortcut: Gemini AI Assistant -->
+    <shortcut
+        android:shortcutId="shortcut_gemini_assistant"
+        android:enabled="true"
+        android:icon="@drawable/ic_water_drop"
+        android:shortcutShortLabel="@string/shortcut_assistant_short"
+        android:shortcutLongLabel="@string/shortcut_assistant_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example"
+            android:targetClass="com.example.MainActivity"
+            android:data="watertracker://assistant" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>
